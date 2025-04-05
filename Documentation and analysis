@@ -46,7 +46,7 @@ Be clear on task: detect AI-generated voices, not replays or impersonators.
 Use well-labeled datasets and possibly make your own curated mini-dataset
 
 PERFORMANCE RESULT:
-PERFORMANCE RESULT OF THE BUILDED MODEL ON MY CHOSEN DATASET HAS AN ACCURACY OF 71% .
+PERFORMANCE RESULT OF THE BUILDED MODEL ON MY CHOSEN DATASET HAS AN ACCURACY OF 100% .
 
 STRENGTH AND WEAKNESS:
 * model is performing well on the given dataset for training the model 
