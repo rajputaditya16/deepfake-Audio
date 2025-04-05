@@ -1,0 +1,78 @@
+During researching you will get various CNN models for the same task but when you will get in depth of the research you will find out that each and every model has their own pros
+and cons like some model will require heavy performaning processing , some will not work effectively on real time data and many more other things . So at last I decided to create
+my own model . 
+
+Challenges encounterd during the project and their solutions:
+  1. Dataset Quality & Diversity
+Challenge: Real vs. fake audio datasets are often imbalanced, small, or lack variation in voice, language, and recording conditions.
+
+Why it matters: Your model might overfit to specific speakers or environments instead of learning generalized features.
+
+Solution: Use large-scale datasets like:
+
+ASVspoof, Fake-or-Real, or WaveFake
+
+Apply data augmentation (e.g., noise, pitch shift, time stretch) 
+
+ 2. Real-Time / Low-Latency Detection
+Challenge: Deploying models in real-time systems (e.g., calls, voice assistants) requires fast inference and low compute load.
+
+Why it matters: Most SOTA models (like AASIST) are heavy.
+
+Solution:
+
+Use lightweight CNNs or distilled models
+
+3. Background Noise & Real-world Conditions
+Challenge: Noisy environments, reverberation, or mic quality can hide deepfake cues.
+
+Why it matters: Real-life recordings differ greatly from clean lab data.
+
+Solution:
+
+Use noise-robust features (e.g., CQCC, RASTA-MFCC)
+
+Train on augmented noisy data to simulate real-world conditions
+
+ 4. Labeling and Ground Truth Confusion
+Challenge: Some datasets mix voice conversion, TTS, and replay under the term “deepfake”.
+
+Why it matters: Your model might be trained on wrong definitions of "fake".
+
+Solution:
+
+Be clear on task: detect AI-generated voices, not replays or impersonators.
+
+Use well-labeled datasets and possibly make your own curated mini-dataset
+
+PERFORMANCE RESULT:
+PERFORMANCE RESULT OF THE BUILDED MODEL ON MY CHOSEN DATASET HAS AN ACCURACY OF 71% .
+
+STRENGTH AND WEAKNESS:
+* model is performing well on the given dataset for training the model 
+* model has not performinng enough good for the real time and noisy data in real time 
+
+
+FUTURE IMPROVEMENT :
+    so for the future we need to train the model with that enough real and fake audio dataset that it will work well enough in real time that
+we can identify any real time voice as real or fake .
+
+What were the most significant challenges in implementing this model?
+     So the most significant challenge i have faed during the project is with the data , variety of data , hoew much data we need for the model training
+  and at last with feature engineering and labeling the data.
+
+How might this approach perform in real-world conditions vs. research datasets?
+     Basically model is performing well with research datset i have provided to it but in real world condition it might not perform well it need more training and 
+  improvemnt in the model then after that it will perform well in real world condition.
+
+What additional data or resources would improve performance?
+      I think high performing system and processor is needed for this model after making some improvement in the model to perform model. And talking about data so we need 
+  more and more variety of data so that our model can be able to tackel with any kind of data in real time and in real world.
+
+How would you approach deploying this model in a production environment?
+     Right now I am not thinking about deploying the model in production enviroment firstly i want to make it capable as enough that it can tackle any kind of data in real 
+  time and gives us accurate result .
+
+
+
+
