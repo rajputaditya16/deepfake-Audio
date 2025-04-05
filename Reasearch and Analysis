@@ -1,0 +1,64 @@
+Model 1: AASIST (Audio Anti-Spoofing using Integrated Spectro-Temporal Learning)
+🧪 Key Technical Innovation:
+		○ Uses a graph-based attention network that processes both spectral and temporal dimensions.
+		○ Incorporates self-attention + convolutional encoding directly on raw audio.
+		○ Learns multi-scale relationships using graph attention, making it robust to different spoof types.
+
+📊 Reported Performance Metrics:
+		○ EER (Equal Error Rate): ~1.84% on ASVspoof 2019 LA.
+		○ Accuracy > 97% in controlled datasets.
+		○ Ranked 1st in several spoofing challenges.
+
+💡 Why It's Promising for Us:
+		○ Works on raw audio, so minimal preprocessing.
+		○ Excellent for real conversation-style detection due to temporal modeling.
+		○ Strong defense against AI-generated speech — including unseen or advanced fakes.
+		○ Used in real-world applications (banks, biometrics, forensics).
+
+⚠️ Potential Limitations/Challenges:
+		○ Heavy architecture — not ideal for real-time on low-power devices.
+		○ Needs PyTorch + GPU for optimal performance.
+		○ Complex training pipeline and tuning.
+
+Model 2: SpecRNet (Spectrogram-based Residual Network)
+	
+🧪 Key Technical Innovation:
+		○ Uses residual CNN blocks on log-mel spectrograms to detect inconsistencies in frequency patterns.
+		○ Leverages skip connections for deeper feature learning and stability.
+		○ Focuses on hierarchical spectral patterns — where many fakes leak artifacts.
+
+📊 Reported Performance Metrics:
+		○ EER: ~2.3% – 4.5%
+		○ Achieves high accuracy on spoofing datasets using fewer resources than transformer-based models.
+
+💡 Why It's Promising for Us:
+		○ Lightweight but performs well — good for student projects or proof-of-concept.
+		○ Runs on CPU and basic GPU setups.
+		○ Simple to build with Keras or PyTorch.
+		○ Well-suited for spectrogram-based analysis of short or clipped speech.
+	
+⚠️ Potential Limitations/Challenges:
+		○ Less effective on long-form or noisy audio.
+		○ Doesn’t model time dependencies explicitly — lacks temporal learning like LSTM or attention.
+
+   Model 3: CNN + LSTM Hybrid
+	 
+🧪 Key Technical Innovation:
+		○ Combines CNNs for spatial feature extraction from MFCCs or spectrograms + LSTM for sequence modeling.
+		○ CNN captures local features, LSTM captures global context across time.
+
+📊 Reported Performance Metrics:
+		○ EER: ~3–6% depending on data quality and tuning.
+		○ Can outperform pure CNNs on conversational and longer utterances.
+
+💡 Why It's Promising for Us:
+		○ Handles real-time conversations better than CNN alone.
+		○ Easy to implement with Keras or PyTorch.
+		○ Works well with MFCC features — which are fast and lightweight.
+		○ A nice balance between performance and complexity.
+
+⚠️ Potential Limitations/Challenges:
+		○ LSTM layers can slow down inference and increase memory usage.
+		○ Needs input sequence alignment (padding, trimming).
+		○ Can overfit without proper regularization (dropout, batch norm, etc.)
+
